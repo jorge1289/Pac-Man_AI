@@ -1,3 +1,12 @@
+/**
+ * Utility functions for drawing Pacman on the canvas
+ * Handles the visual representation of Pacman including:
+ * - Position calculation
+ * - Direction-based rotation
+ * - Mouth animation
+ * - Color and size properties
+ */
+
 export const drawPacman = (ctx, agent, gridSize) => {
   const { x, y } = agent.getPosition();
   const direction = agent.getDirection();

@@ -1,3 +1,11 @@
+/**
+ * Main Pacman game component that handles:
+ * - Game initialization and state management
+ * - Integration with Pyodide for Python game logic
+ * - Canvas setup and rendering
+ * - React component lifecycle
+ */
+
 import React, { useRef, useEffect, useState } from 'react';
 
 const PacmanGame = () => {

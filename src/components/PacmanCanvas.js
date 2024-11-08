@@ -1,3 +1,13 @@
+/**
+ * Canvas display manager for the Pacman game
+ * Responsible for:
+ * - Managing the game's visual display
+ * - Handling frame-by-frame updates
+ * - Drawing all game elements (walls, food, agents)
+ * - Score display
+ * - Game state visualization
+ */
+
 class PacmanCanvasDisplay {
   constructor(canvasContext, gridSize = 30.0) {
     this.ctx = canvasContext;
