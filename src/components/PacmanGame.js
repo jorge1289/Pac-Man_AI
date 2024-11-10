@@ -9,9 +9,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 const PacmanGame = () => {
-  const canvasRef = useRef(null);
-  const [gameState, setGameState] = useState(null);
-  
+  // ... existing state and ref setup ...
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
@@ -38,13 +37,15 @@ const PacmanGame = () => {
     initGame();
   }, []);
   
-  return (
-    <div className="pacman-game">
-      <canvas 
-        ref={canvasRef}
-        width={DEFAULT_GRID_SIZE * 20}
-        height={DEFAULT_GRID_SIZE * 20 + INFO_PANE_HEIGHT}
-      />
-    </div>
+  return React.createElement(
+    'div',
+    { className: 'pacman-game' },
+    React.createElement('canvas', {
+      ref: canvasRef,
+      width: DEFAULT_GRID_SIZE * 20,
+      height: DEFAULT_GRID_SIZE * 20 + INFO_PANE_HEIGHT
+    })
   );
-}; 
+};
+
+export default PacmanGame; 
